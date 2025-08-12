@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue sur notre Application Simple</h1>
+        <p>Ceci est une application web basique pour ajouter des utilisateurs.</p>
+
+        <div class="user-form-section">
+            <h2>Ajouter un nouvel utilisateur</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="firstName">Prénom :</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nom :</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <button type="submit">Ajouter l'utilisateur</button>
+            </form>
+        </div>
+
+        <div class="user-list-section">
+            <h2>Liste des utilisateurs</h2>
+            <ul id="userList">
+                <!-- Les utilisateurs ajoutés seront affichés ici -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
