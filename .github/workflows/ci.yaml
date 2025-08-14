@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build backend Docker image
+      run: |
+        cd backend
+        docker build -t devops-backend .
+
+    - name: Test Docker Compose build
+      run: |
+        docker-compose up --build -d
+        sleep 15
+        docker-compose ps
+        docker-compose logs
+        docker-compose down -v
