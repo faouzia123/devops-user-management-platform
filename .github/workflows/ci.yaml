@@ -23,8 +23,8 @@ jobs:
 
     - name: Test Docker Compose build
       run: |
-        docker-compose up --build -d
+        docker compose up --build -d
         sleep 15
-        docker-compose ps
-        docker-compose logs
-        docker-compose down -v
+        docker compose ps
+        docker compose logs
+        docker compose down -v
